@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NexiforgeEstateAgency</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com' %}" rel="preconnect">
+  <link href="{% static 'https://fonts.gstatic.com' %}" rel="preconnect" crossorigin>
+  <link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: EstateAgency
+  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+  * Updated: Aug 09 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="index-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Nexiforge Estate<span>Agency</span></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}" class="active">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}">Services</a></li>
+          <li><a href="{% url 'properties' %}">Properties</a></li>
+          <li><a href="{% url 'agents' %}">Agents</a></li>
+
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section dark-background">
+
+      <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+        <div class="carousel-item active">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-3.jpg' %}" alt="">
+          <div class="carousel-container">
+            <div>
+              <p>Keroka, Kisii</p>
+              <h2><span>204</span> 5 Bed Townhouse with En Suite</h2>
+                <button class="bg-dark"><a href="{% url 'book' %}" class="btn-get-started">rent | Kshs 15,500</a></button>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-1.jpg' %}" alt="">
+          <div class="carousel-container">
+            <div>
+              <p>Ogembo, Kisii</p>
+              <h2><span>247</span> 5 Bed Townhouse with En Suite</h2>
+                <button class="bg-dark"><a href="{% url 'book' %}" class="btn-get-started">sale | Kshs 19,500</a></button>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <div class="carousel-item">
+          <img src="{% static 'assets/img/hero-carousel/hero-carousel-2.jpg' %}" alt="">
+          <div class="carousel-container">
+            <div>
+              <p>Nyamira, Nyamira</p>
+              <h2><span>247</span> 5 Bed Townhouse with En Suite</h2>
+                <button class="bg-dark"><a href="{% url 'book' %}" class="btn-get-started">rent | Kshs 12,900</a></button>
+            </div>
+          </div>
+        </div><!-- End Carousel Item -->
+
+        <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+        </a>
+
+        <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+          <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+        </a>
+
+        <ol class="carousel-indicators"></ol>
+
+      </div>
+
+    </section><!-- /Hero Section -->
+
+    <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center bg-primary">
+            <div class="col-lg-8">
+              <h1>Services</h1>
+              <p class="mb-0">At NexiforgeAgency, we offer a range of residential and commercial property services.
+                  Whether you're buying, letting, renting or investing in property, we can assist you through the entire process. Our commercial team offers leading commercial property transaction, management and leasing services across Kenya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs bg-dark">
+        <div class="container">
+          <ol class="bg-dark">
+            <li><a href="{% static 'index' %}">Home</a></li>
+            <li class="current text-white">/ Services</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Buying Residential Property</h3>
+              </a>
+              <p>Over the years Kenya has remained one of the most desirable African countries to choose to live in, with houses for sale in Kenya continuing to attract international buyers.
+              With access to unrivalled property for sale in Kenya, NexiforgeAgency is expertly positioned to help you in your Kenyan property search.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Renting Residential Property</h3>
+              </a>
+              <p></p>Welcome to NexiforgeAgency in Kenya - your starting point to the finest property to rent across Kenya and gateway to luxury East African rental properties through NexiforgeAgency
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Commercial Property</h3>
+              </a>
+              <p>NexiforgeAgency's commercial property department proactively monitors and responds to market supply and demand in Nairobi, Mombasa and throughout Kenya.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="s{% static 'service-details' %}" class="stretched-link">
+                <h3>Capital Markets</h3>
+              </a>
+              <p>As the largest privately owned capital markets platform in the world, we are driven by a uniquely bespoke and personal culture. Our ambition is limited only to that of our clients who lie at the heart of everything we do.</p>
+              <a href="s{% static 'service-details' %}]" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Valuations</h3>
+              </a>
+              <p>Our NexiforgeAgency's Valuation & Advisory experts provide a comprehensive range of single and portfolio valuations, market appraisals and consultancy services across both commercial and residential sectors.</p>
+              <a href="{% static 'service-details' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Occupier Strategy and Solutions</h3>
+              </a>
+              <p>Being a business partner to our clients – and not just a service provider – is so important to our Occupier Strategy and Solutions team. Our team acts as an extended arm of our clients' corporate real estate functions, creating value in their portfolios and developing bespoke solutions to help them achieve their business objectives</p>
+              <a href="{% static 'service-details' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+        <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Properties</h1>
+              <p class="mb-0">Enjoy an extensive selection of properties with the international NexiforgeAgency network.
+              In more than 40 years we have perfected our real estate services and continue to pass on our consolidated pool of knowledge to our agents. NexiforgeAgency guarantees a comprehensive range of properties, we do not overwhelm our clients with information. Instead NexiforgeAgency agents conduct an essential selection of those properties that meet the clients needs </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs bg-dark">
+        <div class="container">
+          <ol class="bg-dark">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current text-white">/ Properties</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Real Estate Section -->
+    <section id="real-estate" class="real-estate section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-1.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Kshs 39,000</span>
+                <h3><a href="{% static 'property-single' %}" class="stretched-link">Nyari Nairobi,Kenya</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">340m2</div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-2.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Kshs 225,000</span>
+                <h3><a href="{% static 'property-single' %}" class="stretched-link">Runda, Nairobi</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">340m2</div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-3.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Kshs 145,950</span>
+                <h3><a href="{% static 'property-single' %}" class="stretched-link">Kitisuru, Along Kisumu Avenue</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">340m2</div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-4.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Kshs 27,500</span>
+                <h3><a href="{% static 'property-single' %}" class="stretched-link">Njoro, Nakuru</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">340m2</div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-5.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Rent | Kshs 65 000</span>
+                <h3><a href="{% static 'property-single' %}" class="stretched-link">Yaya Centre, Nairobi</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">340m2</div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+          <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="card">
+              <img src="{% static 'assets/img/properties/property-6.jpg' %}" alt="" class="img-fluid">
+              <div class="card-body">
+                <span class="sale-rent">Sale | Kshs 2,115,000</span>
+                <h3><a href="{% static 'property-single' %}" class="stretched-link">Karen, Nairobi</a></h3>
+                <div class="card-content d-flex flex-column justify-content-center text-center">
+                  <div class="row propery-info">
+                    <div class="col">Area</div>
+                    <div class="col">Beds</div>
+                    <div class="col">Baths</div>
+                    <div class="col">Garages</div>
+                  </div>
+                  <div class="row">
+                    <div class="col">340m2</div>
+                    <div class="col">5</div>
+                    <div class="col">2</div>
+                    <div class="col">1</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Property Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Real Estate Section -->
+
+  </main>
+
+  </main>
+
+      <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center bg-primary">
+            <div class="col-lg-8">
+              <h1>Agents</h1>
+              <p class="mb-0">When selling your property with the help of a real estate agent, there are two ways to go about it. The first and the most common option is called intermediation or multible listing agreement. This is where you allow multible agencies to promote your home and the agent who successfully closes the deal receives commission. The second is an exclussive representation contract, wher you grant the sole right to sell your property to one broker. Now, the question is which option is more beneficial for you?</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs bg-dark">
+        <div class="container">
+          <ol class="bg-dark">
+            <li><a href="{% static 'index' %}">Home</a></li>
+            <li class="current text-white">/ Agents</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Agents Section -->
+   <section id="agents" class="agents section">
+
+      <div class="container">
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/team/doo.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Wilfred Omondi</h4>
+                <span>Chief Executive Officer</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/team/foo.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Humprey Ken</h4>
+                <span>Rent Manager</span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <div class="pic"><img src="{% static 'assets/img/team/tee.jpg' %}" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Mathew Rotich</h4>
+                <span>Sale manager<br></span>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Agents Section -->
+
+      </main>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials section">
+
+      <!-- Section Title -->
+      <div class="container section-title bg-primary" data-aos="fade-up">
+        <h2>Testimonials</h2>
+        <p>They took the time to find us a home near great schools and parks. We couldn’t be happier with their attention to our family’s needs</p>
+      </div><!-- End Section Title -->
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="swiper init-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 5000
+              },
+              "slidesPerView": "auto",
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 40
+                },
+                "1200": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 1
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                    "Working with NexiforgeAgency was an absolute pleasure! They made the process of buying our dream home seamless and stress-free. Highly recommended!"
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Benard Guchiri</h3>
+                  <h4 class="text-primary">Ceo &amp; Founder</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                 "The team at NexiforgeAgency knows the market inside and out. They helped us find the perfect property at the right price. Their expertise is unmatched!"
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Sarah Rose</h3>
+                  <h4 class="text-primary">Designer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                 "I felt like I was their top priority. They took the time to understand exactly what I was looking for and found a home that exceeded my expectations."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Jene Margret</h3>
+                  <h4 class="text-primary">Store Owner</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  "I felt like I was their top priority. They took the time to understand exactly what I was looking for and found a home that exceeded my expectations."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Brandon Njoroge</h3>
+                  <h4 class="text-primary">Freelancer</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+            <div class="swiper-slide">
+              <div class="testimonial-item">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                </div>
+                <p>
+                  "Relocating to a new city was daunting, but NexiforgeAgency made it so much easier. They found us a great neighborhood and the perfect house for our family."
+                </p>
+                <div class="profile mt-auto">
+                  <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                  <h3>Alfred Macha</h3>
+                  <h4 class="text-primary">Entrepreneur</h4>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+
+    </section><!-- /Testimonials Section -->
+
+  </main>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center bg-primary">
+            <div class="col-lg-8">
+              <h1>About</h1>
+              <p class="mb-0">Nexiforge Agency is the trusted real estate company that connects people to properties. Serving the kenyan market, We use AI to match you with a real estate agency, private seller or landlord with the right property.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs bg-dark">
+        <div class="container">
+          <ol class="bg-dark">
+            <li><a href="{% static 'index' %}">Home</a></li>
+            <li class="current text-white">/ About Us</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
+            <p class="who-we-are">Who We Are</p>
+            <h3>Unleashing reasons why choose NexiforgeAgency</h3>
+            <p class="fst-italic">
+              On Nexiforge Agency, listings are verified to ensure its accuracy and authenticity. So you know when you reach out to the real estate agent or property owner, it's real.
+                Finding the right home is often the first step. We partner with banks, home insurance providers, & moving companies to help smooth the whole journey of home ownership
+            </p>
+            <ul>
+              <li><i class="bi bi-check-circle"></i> <span>Make right choice with help from trusted local experts.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Be alerted to the latest properties first.</span></li>
+              <li><i class="bi bi-check-circle"></i> <span>Support at all stages of your property journey.</span></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6 about-images" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4">
+              <div class="col-lg-6">
+                <img src="{% static 'assets/img/about.jpg' %}" class="img-fluid" alt="">
+              </div>
+              <div class="col-lg-6">
+                <div class="row gy-4">
+                  <div class="col-lg-12">
+                    <img src="{% static 'assets/img/banner2.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="col-lg-12">
+                    <img src="{% static 'assets/img/cafeteria.png' %}" class="img-fluid" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- /About Section -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="stats section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-emoji-smile color-blue flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Happy Clients</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-journal-richtext color-orange flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Projects</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-headset color-green flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hours Of Support</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item d-flex align-items-center w-100 h-100">
+              <i class="bi bi-people color-pink flex-shrink-0"></i>
+              <div>
+                <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+                <p>Hard Workers</p>
+              </div>
+            </div>
+          </div><!-- End Stats Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Stats Section -->
+
+    <!-- Features Section -->
+    <section id="features" class="features section">
+
+      <div class="container">
+
+        <div class="row justify-content-around gy-4">
+          <div class="features-image col-lg-6" data-aos="fade-up" data-aos-delay="100"><img src="assets/img/features-bg.jpg" alt=""></div>
+
+          <div class="col-lg-5 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <h3>Customer Testimonials</h3>
+            <p>Over 35 people work towards the goal to simplify the property search experience by  being people-centric while leveraging the latest technology, Leading the team Don orenge the CEO of NexiforgeAgency. A thought leader in kenya's real estate sector, he is a regular keynote speaker at prominent industry events.</p>
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-easel flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">George Yuks</a></h4>
+                <p>NexiforgeAgency has helped my reach out to kenyans in diaspora and to close deals amounting to more than Kshs 12,000,000 (USD 101,600) in less than one year of joining the platform</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-patch-check flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Adrea John</a></h4>
+                <p>Interacting with NexiforgeAgency platform is seamless in regards to listing properties. The CRM is very useful in following up inquiries. Also, market insights in regards to pricing within different areas is very useful</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Owen Ombicha</a></h4>
+                <p>My experiance was great. Very good service. Excellent and i hope you get a lot of success</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+            <div class="icon-box d-flex position-relative" data-aos="fade-up" data-aos-delay="600">
+              <i class="bi bi-brightness-high flex-shrink-0"></i>
+              <div>
+                <h4><a href="" class="stretched-link">Dajan Joshua</a></h4>
+                <p>NexiforgeAgency are the best real estate company. I have ever known and , even worked with. I'll always choose nexiforgeAgency</p>
+              </div>
+            </div><!-- End Icon Box -->
+
+          </div>
+        </div>
+
+      </div>
+
+    </section><!-- /Features Section -->
+
+  </main>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center bg-primary">
+            <div class="col-lg-8">
+              <h1>Contact</h1>
+              <p class="mb-0">Are you looking to live amongst the bustle of Nairobi? Or maybe you prefer to wake up to sea views in Mombasa? With over 7,500+ listings for sale, NexiforgeAgency can match you with a property to call home. Get exclusive insights into popular neighbourhoods such as Karen, Westlands and Kiambu Road. Filter down to what's important for you. Looking only for 3 bed houses in Nairobi? Or do you long for a lovely townhouse rather than a Nairobi apartment? We can guide you to the best places to invest..</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs bg-dark">
+        <div class="container">
+          <ol class="bg-dark">
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li class="current text-white">/ Contact</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="mb-4" data-aos="fade-up" data-aos-delay="200">
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.536893471968!2d34.763963173970666!3d-0.6805286352619925!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182b3bfd977384e5%3A0x14dedf81f2a36c16!2sNyanchwa%20Adventist%20Mission%20Hospital!5e0!3m2!1sen!2ske!4v1733756885924!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div><!-- End Google Maps -->
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4">
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <div>
+                <h3>Address</h3>
+                <p>Nyanchwa Street, Kisii, 45 Twin Towers</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-telephone flex-shrink-0"></i>
+              <div>
+                <h3>Call Us</h3>
+                <p>+254 796 414 456</p>
+              </div>
+            </div><!-- End Info Item -->
+
+            <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="500">
+              <i class="bi bi-envelope flex-shrink-0"></i>
+              <div>
+                <h3>Email Us</h3>
+                <p>NexiforgeAgency@gmail.com</p>
+              </div>
+            </div><!-- End Info Item -->
+
+          </div>
+
+          <div class="col-lg-8">
+            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+              <div class="row gy-4">
+
+                <div class="col-md-6">
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                </div>
+
+                <div class="col-md-6 ">
+                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                </div>
+
+                <div class="col-md-12">
+                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                </div>
+
+                <div class="col-md-12 text-center">
+                  <div class="loading">Loading</div>
+                  <div class="error-message"></div>
+                  <div class="sent-message">Your message has been sent. Thank you!</div>
+
+                  <button type="submit">Send Message</button>
+                </div>
+
+              </div>
+            </form>
+          </div><!-- End Contact Form -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Contact Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background bg-dark text-white">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4 class="text-primary" >Address</h4>
+            <p>Nyanchwa Street</p>
+            <p>Kisii, 45 Twin Towers</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4 class="text-primary">Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+254 796 414 456</span><br>
+              <strong>Email:</strong> <span>nexiforgeAgency@gmail.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4 class="text-primary">Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
+              <strong>Sunday</strong>: <span>Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-primary">Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter bg-white"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook bg-white"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram bg-white"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin bg-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename text-primary">NexiforgeAgency</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="{% static 'https://bootstrapmade.com/' %}">Nexiforge HUB</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - NexiforgeEstateAgency</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+    {% load static %}
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="{% static 'https://fonts.googleapis.com' %}" rel="preconnect">
+  <link href="{% static 'https://fonts.gstatic.com' %}" rel="preconnect" crossorigin>
+  <link href="{% static 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' %}" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: EstateAgency
+  * Template URL: https://bootstrapmade.com/real-estate-agency-bootstrap-template/
+  * Updated: Aug 09 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="{% url 'index' %}" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Nexiforge Estate<span>Agency</span></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="{% url 'index' %}">Home</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'services' %}" class="active">Services</a></li>
+          <li><a href="{% url 'properties' %}">Properties</a></li>
+          <li><a href="{% url 'agents' %}">Agents</a></li>
+
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center bg-primary">
+            <div class="col-lg-8">
+              <h1>Services</h1>
+              <p class="mb-0">At NexiforgeAgency, we offer a range of residential and commercial property services.
+                  Whether you're buying, letting, renting or investing in property, we can assist you through the entire process. Our commercial team offers leading commercial property transaction, management and leasing services across Kenya.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs bg-dark">
+        <div class="container">
+          <ol class="bg-dark">
+            <li><a href="{% static 'index' %}">Home</a></li>
+            <li class="current text-white">/ Services</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-activity"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Buying Residential Property</h3>
+              </a>
+              <p>Over the years Kenya has remained one of the most desirable African countries to choose to live in, with houses for sale in Kenya continuing to attract international buyers.
+              With access to unrivalled property for sale in Kenya, NexiforgeAgency is expertly positioned to help you in your Kenyan property search.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-broadcast"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Renting Residential Property</h3>
+              </a>
+              <p></p>Welcome to NexiforgeAgency in Kenya - your starting point to the finest property to rent across Kenya and gateway to luxury East African rental properties through NexiforgeAgency
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-easel"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Commercial Property</h3>
+              </a>
+              <p>NexiforgeAgency's commercial property department proactively monitors and responds to market supply and demand in Nairobi, Mombasa and throughout Kenya.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-bounding-box-circles"></i>
+              </div>
+              <a href="s{% static 'service-details' %}" class="stretched-link">
+                <h3>Capital Markets</h3>
+              </a>
+              <p>As the largest privately owned capital markets platform in the world, we are driven by a uniquely bespoke and personal culture. Our ambition is limited only to that of our clients who lie at the heart of everything we do.</p>
+              <a href="s{% static 'service-details' %}]" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-calendar4-week"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Valuations</h3>
+              </a>
+              <p>Our NexiforgeAgency's Valuation & Advisory experts provide a comprehensive range of single and portfolio valuations, market appraisals and consultancy services across both commercial and residential sectors.</p>
+              <a href="{% static 'service-details' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon bg-primary">
+                <i class="bi bi-chat-square-text"></i>
+              </div>
+              <a href="{% static 'service-details' %}" class="stretched-link">
+                <h3>Occupier Strategy and Solutions</h3>
+              </a>
+              <p>Being a business partner to our clients – and not just a service provider – is so important to our Occupier Strategy and Solutions team. Our team acts as an extended arm of our clients' corporate real estate functions, creating value in their portfolios and developing bespoke solutions to help them achieve their business objectives</p>
+              <a href="{% static 'service-details' %}" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Services Section -->
+
+  </main>
+
+  <footer id="footer" class="footer light-background bg-dark text-white">
+
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-geo-alt icon"></i>
+          <div class="address">
+            <h4 class="text-primary">Address</h4>
+            <p>Nyanchwa Street</p>
+            <p>Kisii, 45 Twin Towers</p>
+            <p></p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-telephone icon"></i>
+          <div>
+            <h4 class="text-primary">Contact</h4>
+            <p>
+              <strong>Phone:</strong> <span>+254 796 414 456</span><br>
+              <strong>Email:</strong> <span>nexiforgeAgency@gmail.com</span><br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 d-flex">
+          <i class="bi bi-clock icon"></i>
+          <div>
+            <h4 class="text-primary">Opening Hours</h4>
+            <p>
+              <strong>Mon-Sat:</strong> <span>11AM - 23PM</span><br>
+              <strong>Sunday</strong>: <span>Closed</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <h4 class="text-primary">Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter bg-white"><i class="bi bi-twitter-x"></i></a>
+            <a href="#" class="facebook bg-white"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram bg-white"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin bg-white"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename text-primary">NexiforgeAgency</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="{% static 'https://bootstrapmade.com/' %}">Nexiforge HUB</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+
+  <!-- Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>
